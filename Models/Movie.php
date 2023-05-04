@@ -9,14 +9,16 @@ class Movie
     public $director;
     public $duration;
     public $year;
+    public $poster;
     public $genres;
 
-    public function __construct($title, $director, $duration, $year, array $genres)
+    public function __construct($title, $director, $duration, $year, $poster, array $genres)
     {
         $this->title = $title;
         $this->director = $director;
         $this->duration = $duration;
         $this->year = $year;
+        $this->poster = $poster;
         $this->genres = $genres;
 
 
