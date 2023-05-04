@@ -31,11 +31,12 @@ class Movie
     public function getGenre() {
 
         $genre_name = '';
+        $last_genre = $this->genres[count($this->genres) - 1];
         foreach( $this->genres as $genre ) {
-            if ($this->genres[count($this->genres) - 1] !== $genre) {
-                $genre_name .= $genre->label .',';
-            } else {
+            if ( $genre === $last_genre) {
                 $genre_name .= $genre->label;
+            } else {
+                $genre_name .= $genre->label .',';
             }
            
         }
